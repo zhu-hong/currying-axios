@@ -1,9 +1,9 @@
 import type { AxiosInstance, AxiosRequestConfig } from 'axios'
 
-export function curryingAxios(axios: AxiosInstance) {
+export function curryingAxios<D>(axios: AxiosInstance) {
   return (baseURL?: string) => {
     return {
-      async get(url?: string, args: Record<string, any> = {}, cfg: AxiosRequestConfig = {}) {
+      async get(url?: string, args: Record<string, any> = {}, cfg: AxiosRequestConfig = {}): Promise<D> {
         const { data } = await axios({
           baseURL,
           url,
@@ -14,7 +14,7 @@ export function curryingAxios(axios: AxiosInstance) {
 
         return data
       },
-      async post(url?: string, args: Record<string, any> = {}, cfg: AxiosRequestConfig = {}) {
+      async post(url?: string, args: Record<string, any> = {}, cfg: AxiosRequestConfig = {}): Promise<D> {
         const { data } = await axios({
           baseURL,
           url,
