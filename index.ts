@@ -19,7 +19,7 @@ export function curryingAxios<D>(axios: AxiosInstance) {
           baseURL,
           url,
           method: 'POST',
-          params: args,
+          data: args,
           ...cfg,
         })
 
