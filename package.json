@@ -1,7 +1,7 @@
 {
   "name": "currying-axios",
   "private": false,
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "axios currying",
   "scripts": {
     "build": "unbuild",
@@ -19,8 +19,8 @@
     "index.d.ts"
   ],
   "devDependencies": {
-    "axios": "1.1.3",
-    "unbuild": "0.9.4"
+    "axios": "1.3.3",
+    "unbuild": "1.1.2"
   },
   "homepage": "https://github.com/zhu-hong/currying-axios#readme",
   "repository": {
